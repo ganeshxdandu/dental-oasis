@@ -1,0 +1,2428 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dental Oasis Noida – Your Smile, Our Passion</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400;1,9..40,500&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                DEFAULT: "#279ed8",
+                                dark: "#1a7fb0",
+                                light: "#e6f4fb",
+                                mid: "#b3dff2",
+                            },
+                            ink: {
+                                DEFAULT: "#1a2226",
+                                mid: "#3a4a50",
+                                light: "#6b7f85",
+                            },
+                            cream: "#f7f9fc",
+                            sand: "#eef2f5",
+                        },
+                        fontFamily: {
+                            display: ['"DM Sans"', "sans-serif"],
+                            body: ['"Inter"', "sans-serif"],
+                        },
+                        boxShadow: {
+                            primary: "0 2px 10px rgba(39,158,216,.14)",
+                            "primary-lg": "0 6px 24px rgba(39,158,216,.16)",
+                            card: "0 2px 16px rgba(26,34,38,.07)",
+                            "card-lg": "0 8px 40px rgba(26,34,38,.12)",
+                        },
+                        keyframes: {
+                            float: {
+                                "0%,100%": { transform: "translateY(0)" },
+                                "50%": { transform: "translateY(-8px)" },
+                            },
+                            pulse2: {
+                                "0%,100%": {
+                                    opacity: "1",
+                                    transform: "scale(1)",
+                                },
+                                "50%": {
+                                    opacity: ".35",
+                                    transform: "scale(1.6)",
+                                },
+                            },
+                        },
+                        animation: {
+                            float: "float 3.5s ease-in-out infinite",
+                            pulse2: "pulse2 2s ease-in-out infinite",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            body {
+                font-family: "Inter", sans-serif;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            .font-display {
+                font-family: "DM Sans", sans-serif;
+            }
+
+            .dot-bg {
+                background-image: radial-gradient(
+                    circle,
+                    rgba(39, 158, 216, 0.12) 1.5px,
+                    transparent 1.5px
+                );
+                background-size: 32px 32px;
+            }
+
+            .ph {
+                background: linear-gradient(
+                    135deg,
+                    #b3dff2 0%,
+                    #70c5e8 50%,
+                    #97d4ee 100%
+                );
+                position: relative;
+                overflow: hidden;
+            }
+            .ph::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    90deg,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.25) 50%,
+                    transparent 80%
+                );
+                animation: shimmer 2.8s infinite;
+            }
+            @keyframes shimmer {
+                from {
+                    background-position: -200% 0;
+                }
+                to {
+                    background-position: 200% 0;
+                }
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(22px);
+                transition:
+                    opacity 0.55s ease,
+                    transform 0.55s ease;
+            }
+            .reveal.visible {
+                opacity: 1;
+                transform: none;
+            }
+            .reveal.d1 {
+                transition-delay: 0.07s;
+            }
+            .reveal.d2 {
+                transition-delay: 0.14s;
+            }
+            .reveal.d3 {
+                transition-delay: 0.21s;
+            }
+            .reveal.d4 {
+                transition-delay: 0.28s;
+            }
+            .reveal.d5 {
+                transition-delay: 0.35s;
+            }
+
+            .faq-body {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .faq-item.open .faq-body {
+                max-height: 260px;
+            }
+            .faq-item.open .faq-icon {
+                transform: rotate(45deg);
+            }
+            .faq-icon {
+                transition: transform 0.25s ease;
+            }
+
+            .s-card {
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease,
+                    border-color 0.2s ease;
+            }
+            .s-card:hover {
+                transform: translateY(-3px);
+            }
+
+            .mobile-menu {
+                position: fixed;
+                top: 64px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                background: white;
+                border-top: 1px solid #b3dff2;
+                overflow-y: auto;
+                z-index: 9999;
+                flex-direction: column;
+            }
+
+            nav.scrolled {
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-ink overflow-x-hidden">
+        <!-- NAV -->
+        <nav
+            id="navbar"
+            class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-md border-b border-primary-mid/40 transition-shadow duration-300"
+        >
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="flex items-center justify-between h-16">
+                    <a href="#" class="flex items-center gap-2.5">
+                        <div class="w-22 h-10">
+                            <img
+                                src="img/logo.svg"
+                                class="w-full h-full object-cover"
+                                alt=""
+                            />
+                        </div>
+                    </a>
+
+                    <ul class="hidden md:flex items-center gap-8">
+                        <li>
+                            <a
+                                href="#services"
+                                class="text-[.85rem] text-ink-mid font-medium hover:text-primary transition-colors"
+                                >Services</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#why"
+                                class="text-[.85rem] text-ink-mid font-medium hover:text-primary transition-colors"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#team"
+                                class="text-[.85rem] text-ink-mid font-medium hover:text-primary transition-colors"
+                                >Our Team</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#faq"
+                                class="text-[.85rem] text-ink-mid font-medium hover:text-primary transition-colors"
+                                >FAQ</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#booking"
+                                class="text-[.85rem] text-ink-mid font-medium hover:text-primary transition-colors"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+
+                    <div class="hidden md:flex items-center gap-3">
+                        <a
+                            href="#booking"
+                            class="text-[.82rem] px-5 py-2 rounded-full bg-primary text-white font-semibold hover:bg-primary-dark transition-all hover:-translate-y-px"
+                            >Book Appointment</a
+                        >
+                    </div>
+
+                    <button
+                        id="menuToggle"
+                        type="button"
+                        onclick="toggleMenu()"
+                        class="md:hidden flex flex-col gap-1.5 p-1.5"
+                        aria-label="Menu"
+                        aria-expanded="false"
+                    >
+                        <span class="w-5 h-0.5 bg-ink rounded"></span>
+                        <span class="w-5 h-0.5 bg-ink rounded"></span>
+                        <span class="w-5 h-0.5 bg-ink rounded"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile drawer -->
+        <div
+            id="mobileMenu"
+            class="mobile-menu hidden items-center"
+            aria-hidden="true"
+        >
+            <a
+                href="#services"
+                onclick="closeMobile()"
+                class="w-full text-center px-6 py-4 text-base text-ink-mid hover:bg-cream transition-colors"
+                >Services</a
+            >
+            <a
+                href="#why"
+                onclick="closeMobile()"
+                class="w-full text-center px-6 py-4 text-base text-ink-mid hover:bg-cream transition-colors"
+                >About Us</a
+            >
+            <a
+                href="#team"
+                onclick="closeMobile()"
+                class="w-full text-center px-6 py-4 text-base text-ink-mid hover:bg-cream transition-colors"
+                >Our Team</a
+            >
+            <a
+                href="#faq"
+                onclick="closeMobile()"
+                class="w-full text-center px-6 py-4 text-base text-ink-mid hover:bg-cream transition-colors"
+                >FAQ</a
+            >
+            <a
+                href="#booking"
+                onclick="closeMobile()"
+                class="w-max block mx-auto px-6 py-4 text-base text-white bg-primary font-semibold rounded-full hover:bg-primary-dark transition-colors"
+                >Book Appointment</a
+            >
+        </div>
+
+        <!-- HERO -->
+        <section class="pt-28 pb-16 bg-white overflow-hidden relative dot-bg">
+            <div class="max-w-6xl mx-auto px-5">
+                <div
+                    class="grid md:grid-cols-2 md:items-center items-start gap-12"
+                >
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 bg-primary-mid text-primary-dark text-[.6rem] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5"
+                        >
+                            <span
+                                class="w-1.5 h-1.5 rounded-full font-normal bg-primary inline-block animate-pulse2"
+                            ></span>
+                            Now Accepting New Patients · Sector 20, Noida
+                        </div>
+
+                        <h1
+                            class="font-display text-5xl md:text-[3.6rem] font-semibold leading-[1.08] text-ink mb-5"
+                        >
+                            Care You Trust. <br /><span style="color: #279ed8"
+                                >Smiles That Last.</span
+                            >
+                        </h1>
+
+                        <p
+                            class="text-ink-light text-[.95rem] leading-relaxed max-w-[420px] mb-3"
+                        >
+                            A modern dental clinic offering implants,
+                            orthodontics, and aesthetic treatments. Built around
+                            comfort, clarity, and consistent results for every
+                            patient.
+                        </p>
+
+                        <div
+                            class="inline-flex items-center gap-2 bg-primary-light text-primary-dark text-xs font-medium px-4 py-2 rounded-full mb-8"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"
+                                />
+                            </svg>
+                            Open Today: Mon–Sat 10:00 AM – 8:00 PM
+                        </div>
+
+                        <div class="flex flex-wrap gap-3 mb-10">
+                            <a
+                                href="#booking"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark hover:-translate-y-px transition-all"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-white"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 4h-1V2h-2v2H8V2H6v2H5C3.9 4 3 4.9 3 6v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"
+                                    />
+                                </svg>
+                                Book Appointment
+                            </a>
+                            <a
+                                href="https://wa.me/919818589376"
+                                target="_blank"
+                                class="inline-flex items-center gap-2 px-6 py-3 border border-primary-mid/70 text-ink text-sm font-medium rounded-full hover:border-primary hover:text-primary transition-all"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    />
+                                </svg>
+                                WhatsApp Us
+                            </a>
+                        </div>
+
+                        <div class="flex justify-between lg:max-w-[420px]">
+                            <div class="shrink-0">
+                                <p
+                                    class="font-display text-2xl font-bold leading-none"
+                                    style="color: #279ed8"
+                                >
+                                    2,000+
+                                </p>
+                                <p class="text-xs text-ink-light mt-1">
+                                    Happy Patients
+                                </p>
+                            </div>
+                            <div class="shrink-0">
+                                <p
+                                    class="font-display text-2xl font-bold leading-none"
+                                    style="color: #279ed8"
+                                >
+                                    4.9 ★
+                                </p>
+                                <p class="text-xs text-ink-light mt-1">
+                                    Google Rating
+                                </p>
+                            </div>
+                            <div class="shrink-0">
+                                <p
+                                    class="font-display text-2xl font-bold leading-none"
+                                    style="color: #279ed8"
+                                >
+                                    8+
+                                </p>
+                                <p class="text-xs text-ink-light mt-1">
+                                    Specialties
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero visual -->
+                    <div
+                        class="relative w-full md:max-w-sm md:mx-0 md:ml-auto mt-10 md:mt-0"
+                    >
+                        <div
+                            class="relative rounded-3xl overflow-hidden aspect-[4/5] w-full"
+                        >
+                            <img
+                                src="/img/interior.png"
+                                class="w-full h-full object-cover"
+                                alt="Dental Oasis Noida clinic"
+                            />
+
+                            <!-- Gradient overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/90"
+                            ></div>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -left-4 md:-left-8 bg-white rounded-2xl px-4 py-3 flex items-center gap-3 shadow-card-lg animate-float z-10"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-xl grid place-items-center flex-shrink-0"
+                                style="background: #e6f4fb"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-[.8rem] font-semibold text-ink font-display leading-tight"
+                                >
+                                    Certified Specialists
+                                </p>
+                                <p class="text-[.72rem] text-ink-light">
+                                    Advanced dental care
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute -top-3 -right-3 md:-right-5 text-white text-[.78rem] font-bold px-3 py-2 rounded-xl flex items-center gap-1.5"
+                            style="background: #279ed8"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5 fill-amber-300"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            4.9 Rating
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST BAR -->
+        <section style="background: #e6f4fb" class="py-10">
+            <div class="max-w-6xl mx-auto px-5">
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 w-full gap-5"
+                >
+                    <article class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-white rounded-xl grid place-items-center flex-shrink-0"
+                        >
+                            <i
+                                class="ri-verified-badge-line text-xl"
+                                style="color: #279ed8"
+                            ></i>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink"
+                            >
+                                Certified
+                            </h3>
+                            <p class="text-ink-light text-sm">Specialists</p>
+                        </div>
+                    </article>
+
+                    <article class="flex items-center gap-3 lg:justify-center">
+                        <div
+                            class="w-10 h-10 bg-white rounded-xl grid place-items-center flex-shrink-0"
+                        >
+                            <i
+                                class="ri-medal-line text-xl"
+                                style="color: #279ed8"
+                            ></i>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink"
+                            >
+                                4.9 ★
+                            </h3>
+                            <p class="text-ink-light text-sm">Google Rated</p>
+                        </div>
+                    </article>
+
+                    <article class="flex items-center gap-3 lg:justify-center">
+                        <div
+                            class="w-10 h-10 bg-white rounded-xl grid place-items-center flex-shrink-0"
+                        >
+                            <i
+                                class="ri-emotion-happy-line text-xl"
+                                style="color: #279ed8"
+                            ></i>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink"
+                            >
+                                Painless
+                            </h3>
+                            <p class="text-ink-light text-sm">
+                                Laser Treatments
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="flex items-center gap-3 lg:justify-end">
+                        <div
+                            class="w-10 h-10 bg-white rounded-xl grid place-items-center flex-shrink-0"
+                        >
+                            <i
+                                class="ri-bank-card-line text-xl"
+                                style="color: #279ed8"
+                            ></i>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink"
+                            >
+                                Flexible
+                            </h3>
+                            <p class="text-ink-light text-sm">Payment Plans</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="text-center mb-12 reveal">
+                    <p
+                        class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                        style="color: #279ed8"
+                    >
+                        Our Expertise
+                    </p>
+                    <h2
+                        class="font-display text-4xl lg:text-5xl font-semibold text-ink mb-3"
+                    >
+                        What We
+                        <span style="color: #279ed8" class="font-light italic"
+                            >Offer</span
+                        >
+                    </h2>
+                    <p
+                        class="text-ink-light text-sm leading-relaxed max-w-lg mx-auto"
+                    >
+                        Comprehensive dental and aesthetic care tailored to your
+                        needs — from implants and RCT to facial aesthetics and
+                        smile makeovers.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d1"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M21.6779 7.97918L20.2637 9.39339L18.1424 7.27207L16.021 9.39339L19.5566 12.9289L18.1424 14.3431L17.4353 13.636L11.0713 20H5.41444L3.29312 22.1213L1.87891 20.7071L4.00023 18.5858V12.9289L10.3642 6.56497L9.65708 5.85786L11.0713 4.44365L14.6068 7.97918L16.7281 5.85786L14.6068 3.73654L16.021 2.32233L21.6779 7.97918ZM16.021 12.2218L11.7784 7.97918L10.3642 9.39339L12.4855 11.5147L11.0713 12.9289L8.94997 10.8076L7.53576 12.2218L9.65708 14.3431L8.24287 15.7574L6.12155 13.636L6.00023 13.7574V18H10.2429L16.021 12.2218Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Dental Implants
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            Permanent, natural-looking tooth replacement using
+                            top-tier titanium anchors for lifelong durability
+                            and aesthetic perfection.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d2"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M14 4.4375C15.3462 4.4375 16.4375 3.34619 16.4375 2H17.5625C17.5625 3.34619 18.6538 4.4375 20 4.4375V5.5625C18.6538 5.5625 17.5625 6.65381 17.5625 8H16.4375C16.4375 6.65381 15.3462 5.5625 14 5.5625V4.4375ZM1 11C4.31371 11 7 8.31371 7 5H9C9 8.31371 11.6863 11 15 11V13C11.6863 13 9 15.6863 9 19H7C7 15.6863 4.31371 13 1 13V11ZM4.87601 12C6.18717 12.7276 7.27243 13.8128 8 15.124 8.72757 13.8128 9.81283 12.7276 11.124 12 9.81283 11.2724 8.72757 10.1872 8 8.87601 7.27243 10.1872 6.18717 11.2724 4.87601 12ZM17.25 14C17.25 15.7949 15.7949 17.25 14 17.25V18.75C15.7949 18.75 17.25 20.2051 17.25 22H18.75C18.75 20.2051 20.2051 18.75 22 18.75V17.25C20.2051 17.25 18.75 15.7949 18.75 14H17.25Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Facial Aesthetics
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            Non-surgical facial rejuvenation treatments
+                            including Botox, fillers, and skin-boosting
+                            procedures for a naturally refreshed look.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d3"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M13.0607 8.11097L14.4749 9.52518C17.2086 12.2589 17.2086 16.691 14.4749 19.4247L14.1214 19.7782C11.3877 22.5119 6.95555 22.5119 4.22188 19.7782C1.48821 17.0446 1.48821 12.6124 4.22188 9.87874L5.6361 11.293C3.68348 13.2456 3.68348 16.4114 5.6361 18.364C7.58872 20.3166 10.7545 20.3166 12.7072 18.364L13.0607 18.0105C15.0133 16.0578 15.0133 12.892 13.0607 10.9394L11.6465 9.52518L13.0607 8.11097ZM19.7782 14.1214L18.364 12.7072C20.3166 10.7545 20.3166 7.58872 18.364 5.6361C16.4114 3.68348 13.2456 3.68348 11.293 5.6361L10.9394 5.98965C8.98678 7.94227 8.98678 11.1081 10.9394 13.0607L12.3536 14.4749L10.9394 15.8891L9.52518 14.4749C6.79151 11.7413 6.79151 7.30911 9.52518 4.57544L9.87874 4.22188C12.6124 1.48821 17.0446 1.48821 19.7782 4.22188C22.5119 6.95555 22.5119 11.3877 19.7782 14.1214Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Braces &amp; Orthodontics
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            Modern alignment solutions — metal braces, ceramic
+                            braces, and clear aligners — for a perfectly
+                            straight, confident smile.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d1"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M5.70572 5.89018C6.42921 5.022 7.5071 4.5 9 4.5C9.90702 4.5 10.7486 4.7673 11.4538 5.22714C12.2364 5.73739 12.8501 6.48416 13.1936 7.36377C13.3945 7.87822 13.9744 8.13239 14.4888 7.93149C15.0033 7.73058 15.2575 7.15067 15.0565 6.63623C14.769 5.89989 14.3515 5.22943 13.8324 4.65272C14.2044 4.55311 14.5957 4.5 15 4.5C16.4929 4.5 17.5708 5.022 18.2943 5.89018C19.038 6.78262 19.5 8.15442 19.5 10C19.5 12.9029 19.0142 15.3848 18.2699 17.1024C17.485 18.9138 16.6026 19.5 16 19.5C15.8503 19.5 15.7246 19.4648 15.5385 19.1417C15.3127 18.7496 15.1541 18.1821 14.9471 17.4221C14.7731 16.7831 14.5569 15.9894 14.1947 15.3604C13.7871 14.6523 13.1003 14 12 14C10.8997 14 10.2129 14.6523 9.80525 15.3604C9.44313 15.9894 9.22692 16.7831 9.05289 17.4221C8.8459 18.1821 8.68726 18.7496 8.4615 19.1417C8.27544 19.4648 8.14973 19.5 8 19.5C7.3974 19.5 6.51501 18.9138 5.73006 17.1024C4.98575 15.3848 4.5 12.9029 4.5 10C4.5 8.15442 4.96203 6.78262 5.70572 5.89018ZM12 3.23245C11.1019 2.7645 10.0808 2.5 9 2.5C6.9929 2.5 5.32079 3.228 4.16928 4.60982C3.03797 5.96738 2.5 7.84558 2.5 10C2.5 13.0971 3.01425 15.8652 3.89494 17.8976C4.73499 19.8362 6.1026 21.5 8 21.5C9.10027 21.5 9.78706 20.8477 10.1947 20.1396C10.5692 19.4892 10.7876 18.6626 10.9648 18.0131C11.1626 17.2875 11.3192 16.7392 11.5385 16.3583C11.7246 16.0352 11.8503 16 12 16C12.1497 16 12.2754 16.0352 12.4615 16.3583C12.6808 16.7392 12.8374 17.2875 13.0352 18.0131C13.2123 18.6625 13.4308 19.4892 13.8053 20.1396C14.2129 20.8477 14.8997 21.5 16 21.5C17.8974 21.5 19.265 19.8362 20.1051 17.8976C20.9858 15.8652 21.5 13.0971 21.5 10C21.5 7.84558 20.962 5.96738 19.8307 4.60982C18.6792 3.228 17.0071 2.5 15 2.5C13.9192 2.5 12.8981 2.7645 12 3.23245Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Root Canal Treatment (RCT)
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            Painless laser-assisted root canal procedures using
+                            the latest rotary endodontics — saving your natural
+                            teeth with 100% precision.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d2"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M15.1986 9.94447C14.7649 9.5337 14.4859 8.98613 14.4085 8.39384L14.0056 5.31138L11.275 6.79724C10.7503 7.08274 10.1433 7.17888 9.55608 7.06948L6.49998 6.50015L7.06931 9.55625C7.17871 10.1435 7.08257 10.7505 6.79707 11.2751L5.31121 14.0057L8.39367 14.4086C8.98596 14.4861 9.53353 14.7651 9.94431 15.1987L12.0821 17.4557L13.4178 14.6486C13.6745 14.1092 14.109 13.6747 14.6484 13.418L17.4555 12.0823L15.1986 9.94447ZM16.0206 17.435L17.4348 16.0208L21.6775 20.2634L20.2633 21.6776L16.0206 17.435Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Crowns &amp; Bridges
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            High-quality ceramic and zirconia crowns and bridges
+                            that restore the strength, function, and natural
+                            look of damaged or missing teeth.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d3"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M16 1C16.5523 1 17 1.44772 17 2V5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V6C2 5.44772 2.44772 5 3 5H7V2C7 1.44772 7.44772 1 8 1H16ZM20 7H4V19H20V7ZM13 9V12H16V14H12.999L13 17H11L10.999 14H8V12H11V9H13ZM15 3H9V5H15V3Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            General &amp; Advanced Surgeries
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            From wisdom tooth extractions and gum surgeries to
+                            complex oral procedures — handled with care,
+                            precision, and international safety protocols.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d1"
+                    >
+                        <div
+                            class="w-12 h-12 rounded-xl grid place-items-center mb-4"
+                            style="background: #e6f4fb"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M15.1986 9.94447C14.7649 9.5337 14.4859 8.98613 14.4085 8.39384L14.0056 5.31138L11.275 6.79724C10.7503 7.08274 10.1433 7.17888 9.55608 7.06948L6.49998 6.50015L7.06931 9.55625C7.17871 10.1435 7.08257 10.7505 6.79707 11.2751L5.31121 14.0057L8.39367 14.4086C8.98596 14.4861 9.53353 14.7651 9.94431 15.1987L12.0821 17.4557L13.4178 14.6486C13.6745 14.1092 14.109 13.6747 14.6484 13.418L17.4555 12.0823L15.1986 9.94447ZM16.0206 17.435L17.4348 16.0208L21.6775 20.2634L20.2633 21.6776L16.0206 17.435Z"
+                                />
+                            </svg>
+                        </div>
+                        <h3
+                            class="font-display text-base font-semibold text-ink mb-2"
+                        >
+                            Teeth Whitening &amp; Veneers
+                        </h3>
+                        <p class="text-ink-light text-sm leading-relaxed">
+                            Professional-grade whitening and porcelain veneers
+                            to remove deep stains and redesign your smile's
+                            shape, shade, and symmetry.
+                        </p>
+                    </div>
+
+                    <div
+                        class="s-card border border-primary-mid/40 rounded-2xl p-6 hover:border-primary-mid hover:shadow-card reveal d2 sm:col-span-2 lg:col-span-2"
+                        style="
+                            background: linear-gradient(
+                                135deg,
+                                #e6f4fb 0%,
+                                #f7f9fc 100%
+                            );
+                        "
+                    >
+                        <div class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-xl grid place-items-center mb-4 flex-shrink-0"
+                                style="background: #279ed8"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="w-6 h-6 fill-white"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-display text-base font-semibold text-ink mb-2"
+                                >
+                                    Complete Smile Makeover
+                                </h3>
+                                <p
+                                    class="text-ink-light text-sm leading-relaxed"
+                                >
+                                    A comprehensive, personalized smile
+                                    transformation combining whitening, veneers,
+                                    alignment correction, and aesthetic
+                                    contouring — delivering life-changing
+                                    results in as few as 2–4 visits.
+                                </p>
+                                <a
+                                    href="#booking"
+                                    class="inline-flex items-center gap-1.5 text-sm font-semibold mt-3 hover:underline"
+                                    style="color: #279ed8"
+                                    >Book a Consultation →</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / WHY US -->
+        <section id="why" class="py-20 bg-cream">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+                    <div
+                        class="ph rounded-3xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0 flex flex-col items-center justify-center gap-3 text-white/60 reveal"
+                    >
+                        <img
+                            class="w-full h-full object-cover"
+                            src="/img/about-us.png"
+                            alt="Dental Oasis Noida clinic interior"
+                        />
+                    </div>
+
+                    <div class="reveal">
+                        <p
+                            class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                            style="color: #279ed8"
+                        >
+                            Why Patients Trust Us
+                        </p>
+                        <h2
+                            class="font-display text-4xl lg:text-5xl font-semibold text-ink leading-tight mb-4"
+                        >
+                            Advanced
+                            <span
+                                style="color: #279ed8"
+                                class="font-light italic"
+                                >Care</span
+                            >
+                            Meets Patient Comfort.
+                        </h2>
+                        <p
+                            class="text-ink-light text-sm leading-relaxed mb-8 max-w-md"
+                        >
+                            At Dental Oasis Noida, we redefine dentistry by
+                            combining clinical mastery with a soothing sanctuary
+                            environment. Our facility is equipped with
+                            state-of-the-art diagnostic tools, ensuring every
+                            treatment plan is precise, transparent, and
+                            minimally invasive.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-5 h-5 rounded-full grid place-items-center flex-shrink-0 mt-0.5"
+                                    style="background: #279ed8"
+                                >
+                                    <svg
+                                        class="w-3 h-3 fill-white"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                                        />
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-ink-mid"
+                                    >Painless Precision with Laser Tech</span
+                                >
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-5 h-5 rounded-full grid place-items-center flex-shrink-0 mt-0.5"
+                                    style="background: #279ed8"
+                                >
+                                    <svg
+                                        class="w-3 h-3 fill-white"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                                        />
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-ink-mid"
+                                    >Class-B Sterilization Standards</span
+                                >
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-5 h-5 rounded-full grid place-items-center flex-shrink-0 mt-0.5"
+                                    style="background: #279ed8"
+                                >
+                                    <svg
+                                        class="w-3 h-3 fill-white"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                                        />
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-ink-mid"
+                                    >Transparent Treatment Planning</span
+                                >
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-5 h-5 rounded-full grid place-items-center flex-shrink-0 mt-0.5"
+                                    style="background: #279ed8"
+                                >
+                                    <svg
+                                        class="w-3 h-3 fill-white"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                                        />
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-ink-mid"
+                                    >Comfortable Sanctuary Environment</span
+                                >
+                            </div>
+                        </div>
+
+                        <a
+                            href="#team"
+                            class="inline-flex items-center gap-2 px-6 py-3 text-white text-sm font-semibold rounded-full hover:-translate-y-px transition-all"
+                            style="background: #279ed8"
+                        >
+                            Meet Our Team →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <!-- <section id="team" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="text-center mb-12 reveal">
+                    <p
+                        class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                        style="color: #279ed8"
+                    >
+                        Our Experts
+                    </p>
+                    <h2
+                        class="font-display text-4xl lg:text-5xl font-semibold text-ink mb-3"
+                    >
+                        Meet Our
+                        <span style="color: #279ed8" class="font-light italic"
+                            >Specialists</span
+                        >
+                    </h2>
+                    <p
+                        class="text-ink-light text-sm max-w-md mx-auto leading-relaxed"
+                    >
+                        A highly qualified team dedicated to your oral health,
+                        facial aesthetics, and comfort.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="border border-primary-mid/40 rounded-2xl overflow-hidden hover:shadow-card-lg hover:-translate-y-1 transition-all duration-200 reveal d1"
+                    >
+                        <div
+                            class="ph aspect-[3/4] flex flex-col items-center justify-center gap-2 text-white/60"
+                        >
+                            <img
+                                class="w-full h-full object-cover"
+                                src="/img/doctor-1.png"
+                                alt="Lead Dentist – Dental Oasis Noida"
+                            />
+                        </div>
+                        <div class="p-5">
+                            <p
+                                class="text-[10px] font-bold tracking-widest uppercase mb-1"
+                                style="color: #279ed8"
+                            >
+                                Lead Dentist &amp; Clinical Director
+                            </p>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink mb-1.5"
+                            >
+                                Dr. [Your Name]
+                            </h3>
+                            <p class="text-ink-light text-xs leading-relaxed">
+                                BDS / MDS · Specializing in implants, smile
+                                makeovers, and advanced restorative dentistry
+                                with a decade of transformative care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border border-primary-mid/40 rounded-2xl overflow-hidden hover:shadow-card-lg hover:-translate-y-1 transition-all duration-200 reveal d2"
+                    >
+                        <div
+                            class="aspect-[3/4] flex flex-col items-center justify-center gap-2 text-white/60"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    #b8c8dd 0%,
+                                    #7090c0 100%
+                                );
+                            "
+                        >
+                            <img
+                                class="w-full h-full object-cover"
+                                src="/img/doctor-2.png"
+                                alt="Orthodontist – Dental Oasis Noida"
+                            />
+                        </div>
+                        <div class="p-5">
+                            <p
+                                class="text-[10px] font-bold tracking-widest uppercase mb-1"
+                                style="color: #279ed8"
+                            >
+                                Orthodontics &amp; Braces Specialist
+                            </p>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink mb-1.5"
+                            >
+                                Dr. [Your Name]
+                            </h3>
+                            <p class="text-ink-light text-xs leading-relaxed">
+                                MDS Orthodontics · Expert in metal braces,
+                                ceramic braces, and clear aligner therapy for
+                                children, teens, and adults.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="border border-primary-mid/40 rounded-2xl overflow-hidden hover:shadow-card-lg hover:-translate-y-1 transition-all duration-200 reveal d3"
+                    >
+                        <div
+                            class="aspect-[3/4] flex flex-col items-center justify-center gap-2 text-white/60"
+                            style="
+                                background: linear-gradient(
+                                    135deg,
+                                    #c8b8dd 0%,
+                                    #9f70c0 100%
+                                );
+                            "
+                        >
+                            <img
+                                class="w-full h-full object-cover"
+                                src="/img/doctor-3.png"
+                                alt="Facial Aesthetics – Dental Oasis Noida"
+                            />
+                        </div>
+                        <div class="p-5">
+                            <p
+                                class="text-[10px] font-bold tracking-widest uppercase mb-1"
+                                style="color: #279ed8"
+                            >
+                                Facial Aesthetics Specialist
+                            </p>
+                            <h3
+                                class="font-display text-lg font-semibold text-ink mb-1.5"
+                            >
+                                Dr. [Your Name]
+                            </h3>
+                            <p class="text-ink-light text-xs leading-relaxed">
+                                BDS + Aesthetics Certification · Specializing in
+                                non-surgical facial treatments, skin boosters,
+                                and smile design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- GALLERY -->
+        <section id="gallery" class="py-20 bg-ink">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="mb-10 reveal">
+                    <p
+                        class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                        style="color: #b3dff2"
+                    >
+                        Smile Gallery
+                    </p>
+                    <h2
+                        class="font-display text-4xl lg:text-5xl font-semibold text-white"
+                    >
+                        Real
+                        <span style="color: #279ed8" class="font-light italic"
+                            >Transformations</span
+                        >
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="rounded-2xl overflow-hidden reveal d1">
+                        <div class="grid grid-cols-2">
+                            <div
+                                class="aspect-square flex flex-col items-center justify-center gap-1.5 text-white/30 relative"
+                                style="
+                                    background: linear-gradient(
+                                        135deg,
+                                        #2e3f45,
+                                        #3a5060
+                                    );
+                                "
+                            >
+                                <img
+                                    class="w-full h-full object-cover"
+                                    src="/img/before-one.png"
+                                    alt="Before treatment"
+                                />
+                                <div
+                                    class="absolute bottom-2 left-2 text-[9px] font-bold tracking-widest uppercase bg-black/50 text-white px-1.5 py-0.5 rounded"
+                                >
+                                    Before
+                                </div>
+                            </div>
+                            <div
+                                class="aspect-square flex flex-col items-center justify-center gap-1.5 text-white/40 relative"
+                                style="
+                                    background: linear-gradient(
+                                        135deg,
+                                        #279ed8,
+                                        #1a7fb0
+                                    );
+                                "
+                            >
+                                <img
+                                    class="w-full h-full object-cover"
+                                    src="/img/after-one.png"
+                                    alt="After treatment"
+                                />
+                                <div
+                                    class="absolute bottom-2 left-2 text-[9px] font-bold tracking-widest uppercase bg-black/40 text-white px-1.5 py-0.5 rounded"
+                                >
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white/5 border border-white/[.07] border-t-0 px-5 py-4 flex items-center justify-between"
+                        >
+                            <h4
+                                class="text-sm font-display font-semibold text-white"
+                            >
+                                Smile Reconstruction
+                            </h4>
+                            <span class="text-xs" style="color: #b3dff2"
+                                >Dental Implants &amp; Crowns</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden reveal d2">
+                        <div class="grid grid-cols-2">
+                            <div
+                                class="aspect-square flex flex-col items-center justify-center gap-1.5 text-white/30 relative"
+                                style="
+                                    background: linear-gradient(
+                                        135deg,
+                                        #2e3f45,
+                                        #3a5060
+                                    );
+                                "
+                            >
+                                <img
+                                    class="w-full h-full object-cover"
+                                    src="/img/before-two.png"
+                                    alt="Before orthodontics"
+                                />
+                                <div
+                                    class="absolute bottom-2 left-2 text-[9px] font-bold tracking-widest uppercase bg-black/50 text-white px-1.5 py-0.5 rounded"
+                                >
+                                    Before
+                                </div>
+                            </div>
+                            <div
+                                class="aspect-square flex flex-col items-center justify-center gap-1.5 text-white/40 relative"
+                                style="
+                                    background: linear-gradient(
+                                        135deg,
+                                        #279ed8,
+                                        #1a7fb0
+                                    );
+                                "
+                            >
+                                <img
+                                    class="w-full h-full object-cover"
+                                    src="/img/after-two.png"
+                                    alt="After orthodontics"
+                                />
+                                <div
+                                    class="absolute bottom-2 left-2 text-[9px] font-bold tracking-widest uppercase bg-black/40 text-white px-1.5 py-0.5 rounded"
+                                >
+                                    After
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white/5 border border-white/[.07] border-t-0 px-5 py-4 flex items-center justify-between"
+                        >
+                            <h4
+                                class="text-sm font-display font-semibold text-white"
+                            >
+                                Deep Cleaning &amp; Gum Care
+                            </h4>
+                            <span class="text-xs" style="color: #b3dff2"
+                                >Scaling &amp; Polishing</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <!-- <section id="testimonials" class="py-20 bg-cream">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="text-center mb-12 reveal">
+                    <p
+                        class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                        style="color: #279ed8"
+                    >
+                        Real Stories
+                    </p>
+                    <h2
+                        class="font-display text-4xl lg:text-5xl font-semibold text-ink"
+                    >
+                        What Our Patients
+                        <span style="color: #279ed8" class="font-light italic"
+                            >Say</span
+                        >
+                    </h2>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl p-6 relative hover:shadow-card transition-shadow reveal d1"
+                    >
+                        <span
+                            class="absolute top-4 right-5 font-display text-7xl leading-none select-none"
+                            style="color: #b3dff2"
+                            >"</span
+                        >
+                        <div class="flex gap-0.5 mb-4">
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                        </div>
+                        <p
+                            class="text-ink-mid text-sm leading-relaxed italic mb-5"
+                        >
+                            The most painless root canal I've ever had. The
+                            doctor and the team at Dental Oasis are true
+                            professionals. Highly recommended in Noida!
+                        </p>
+                        <div
+                            class="flex items-center gap-3 border-t border-sand pt-4"
+                        >
+                            <div
+                                class="w-9 h-9 rounded-full grid place-items-center font-display font-semibold text-sm flex-shrink-0"
+                                style="background: #b3dff2; color: #1a7fb0"
+                            >
+                                R
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-ink">
+                                    Rahul Sharma
+                                </p>
+                                <p class="text-xs text-ink-light">
+                                    Noida Resident
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl p-6 relative hover:shadow-card transition-shadow reveal d2"
+                    >
+                        <span
+                            class="absolute top-4 right-5 font-display text-7xl leading-none select-none"
+                            style="color: #b3dff2"
+                            >"</span
+                        >
+                        <div class="flex gap-0.5 mb-4">
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                        </div>
+                        <p
+                            class="text-ink-mid text-sm leading-relaxed italic mb-5"
+                        >
+                            I came here for whitening and veneers. The results
+                            are life-changing. My confidence is through the
+                            roof. Thank you, Dental Oasis!
+                        </p>
+                        <div
+                            class="flex items-center gap-3 border-t border-sand pt-4"
+                        >
+                            <div
+                                class="w-9 h-9 rounded-full grid place-items-center font-display font-semibold text-sm flex-shrink-0"
+                                style="background: #dde8f5; color: #3a6abd"
+                            >
+                                P
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-ink">
+                                    Priya Verma
+                                </p>
+                                <p class="text-xs text-ink-light">
+                                    Verified Patient
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl p-6 relative hover:shadow-card transition-shadow reveal d3"
+                    >
+                        <span
+                            class="absolute top-4 right-5 font-display text-7xl leading-none select-none"
+                            style="color: #b3dff2"
+                            >"</span
+                        >
+                        <div class="flex gap-0.5 mb-4">
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            <svg
+                                class="w-4 h-4 fill-yellow-400"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                        </div>
+                        <p
+                            class="text-ink-mid text-sm leading-relaxed italic mb-5"
+                        >
+                            Amazing infrastructure and very hygienic. They
+                            explained every step of my implant surgery. Very
+                            transparent and honest — best clinic in Sector 20!
+                        </p>
+                        <div
+                            class="flex items-center gap-3 border-t border-sand pt-4"
+                        >
+                            <div
+                                class="w-9 h-9 rounded-full grid place-items-center font-display font-semibold text-sm flex-shrink-0"
+                                style="background: #f5e8dd; color: #bd7a3a"
+                            >
+                                A
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-ink">
+                                    Amit Goel
+                                </p>
+                                <p class="text-xs text-ink-light">
+                                    Noida Sector 20
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="testimonials" class="py-20 bg-cream">
+            <div class="max-w-6xl mx-auto px-5">
+                <!-- Heading -->
+                <div class="text-center mb-12">
+                    <p
+                        class="text-[.7rem] font-semibold tracking-widest uppercase mb-2 text-primary"
+                    >
+                        Real Stories
+                    </p>
+                    <h2
+                        class="font-display text-4xl lg:text-5xl font-semibold text-ink"
+                    >
+                        What Our Patients
+                        <span class="text-primary font-light italic">Say</span>
+                    </h2>
+                </div>
+
+                <!-- Grid -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- CARD -->
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl overflow-hidden shadow-sm"
+                    >
+                        <!-- Video -->
+                        <div class="relative">
+                            <video
+                                class="w-full h-90 object-cover object-center testimonial-video"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                            >
+                                <source
+                                    src="/videos/testimonial1.mp4"
+                                    type="video/mp4"
+                                />
+                            </video>
+
+                            <!-- Controls -->
+                            <div class="absolute bottom-3 right-3 flex gap-2">
+                                <button
+                                    class="mute-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Unmute
+                                </button>
+                                <button
+                                    class="pause-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Pause
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="p-5">
+                            <p class="text-sm font-semibold text-ink mb-1">
+                                Pramod Tripathi
+                            </p>
+                            <p class="text-xs text-ink-light">Noida Resident</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl overflow-hidden shadow-sm"
+                    >
+                        <div class="relative">
+                            <video
+                                class="w-full h-90 object-cover testimonial-video"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                            >
+                                <source
+                                    src="/videos/testimonial2.mp4"
+                                    type="video/mp4"
+                                />
+                            </video>
+
+                            <div class="absolute bottom-3 right-3 flex gap-2">
+                                <button
+                                    class="mute-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Unmute
+                                </button>
+                                <button
+                                    class="pause-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Pause
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <p class="text-sm font-semibold text-ink mb-1">
+                                Devatri Paul
+                            </p>
+                            <p class="text-xs text-ink-light">
+                                Verified Patient
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                        class="bg-white border border-primary-mid/40 rounded-2xl overflow-hidden shadow-sm"
+                    >
+                        <div class="relative">
+                            <video
+                                class="w-full h-90 object-cover testimonial-video"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                            >
+                                <source
+                                    src="/videos/testimonial3.mp4"
+                                    type="video/mp4"
+                                />
+                            </video>
+
+                            <div class="absolute bottom-3 right-3 flex gap-2">
+                                <button
+                                    class="mute-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Unmute
+                                </button>
+                                <button
+                                    class="pause-btn bg-black/60 text-white text-xs px-3 py-1 rounded-full"
+                                >
+                                    Pause
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <p class="text-sm font-semibold text-ink mb-1">
+                                Priya Verma
+                            </p>
+                            <p class="text-xs text-ink-light">
+                                Noida Sector 20
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="grid lg:grid-cols-2 gap-14 items-start">
+                    <div class="reveal">
+                        <p
+                            class="text-[.7rem] font-semibold tracking-widest uppercase mb-2"
+                            style="color: #279ed8"
+                        >
+                            Common Queries
+                        </p>
+                        <h2
+                            class="font-display text-4xl lg:text-5xl font-semibold text-ink mb-4"
+                        >
+                            Frequently Asked
+                            <span
+                                style="color: #279ed8"
+                                class="font-light italic"
+                                >Questions</span
+                            >
+                        </h2>
+                        <p class="text-ink-light text-sm leading-relaxed mb-8">
+                            Can't find what you're looking for?
+                            <a
+                                href="#booking"
+                                class="font-medium hover:underline"
+                                style="color: #279ed8"
+                                >Contact our team</a
+                            >
+                            — we're happy to help.
+                        </p>
+
+                        <div
+                            class="border border-primary-mid/40 rounded-2xl p-5 flex items-start gap-4"
+                            style="background: #f7f9fc"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-xl grid place-items-center flex-shrink-0"
+                                style="background: #e6f4fb"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-sm font-semibold text-ink mb-0.5"
+                                >
+                                    Call / WhatsApp Us Directly
+                                </p>
+                                <a
+                                    href="tel:+919818589376"
+                                    class="font-semibold text-sm"
+                                    style="color: #279ed8"
+                                    >+91 98185 89376</a
+                                >
+                                <p class="text-xs text-ink-light mt-0.5">
+                                    Mon–Sat 10am–8pm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 reveal">
+                        <div
+                            class="faq-item border border-primary-mid/40 rounded-xl overflow-hidden"
+                        >
+                            <button
+                                onclick="toggleFaq(this)"
+                                class="w-full flex items-center justify-between gap-4 px-5 py-4 text-sm font-medium text-ink text-left transition-colors"
+                                style="hover:background:#e6f4fb"
+                            >
+                                Do you offer payment plans or EMI options?
+                                <svg
+                                    class="faq-icon w-5 h-5 fill-ink-light flex-shrink-0"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="faq-body">
+                                <p
+                                    class="px-5 pb-4 text-sm text-ink-light leading-relaxed"
+                                >
+                                    Yes! We offer flexible payment options. Our
+                                    team will help you find the most affordable
+                                    plan for your treatment during your
+                                    consultation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="faq-item border border-primary-mid/40 rounded-xl overflow-hidden"
+                        >
+                            <button
+                                onclick="toggleFaq(this)"
+                                class="w-full flex items-center justify-between gap-4 px-5 py-4 text-sm font-medium text-ink text-left transition-colors"
+                            >
+                                How long does a dental implant procedure take?
+                                <svg
+                                    class="faq-icon w-5 h-5 fill-ink-light flex-shrink-0"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="faq-body">
+                                <p
+                                    class="px-5 pb-4 text-sm text-ink-light leading-relaxed"
+                                >
+                                    The implant placement itself takes about 1–2
+                                    hours. Full osseointegration (healing) takes
+                                    3–6 months, after which the final crown is
+                                    placed. We'll guide you through every step.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="faq-item border border-primary-mid/40 rounded-xl overflow-hidden"
+                        >
+                            <button
+                                onclick="toggleFaq(this)"
+                                class="w-full flex items-center justify-between gap-4 px-5 py-4 text-sm font-medium text-ink text-left transition-colors"
+                            >
+                                Are your RCT procedures really painless?
+                                <svg
+                                    class="faq-icon w-5 h-5 fill-ink-light flex-shrink-0"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="faq-body">
+                                <p
+                                    class="px-5 pb-4 text-sm text-ink-light leading-relaxed"
+                                >
+                                    Absolutely. We use advanced rotary
+                                    endodontics and laser-assisted techniques
+                                    along with effective local anaesthesia,
+                                    making root canal treatment comfortable and
+                                    often completable in a single visit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="faq-item border border-primary-mid/40 rounded-xl overflow-hidden"
+                        >
+                            <button
+                                onclick="toggleFaq(this)"
+                                class="w-full flex items-center justify-between gap-4 px-5 py-4 text-sm font-medium text-ink text-left transition-colors"
+                            >
+                                What facial aesthetic treatments do you offer?
+                                <svg
+                                    class="faq-icon w-5 h-5 fill-ink-light flex-shrink-0"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="faq-body">
+                                <p
+                                    class="px-5 pb-4 text-sm text-ink-light leading-relaxed"
+                                >
+                                    We offer Botox, dermal fillers, lip
+                                    augmentation, skin boosters, and
+                                    anti-wrinkle treatments — all administered
+                                    by our certified aesthetic specialist in a
+                                    safe clinical environment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="faq-item border border-primary-mid/40 rounded-xl overflow-hidden"
+                        >
+                            <button
+                                onclick="toggleFaq(this)"
+                                class="w-full flex items-center justify-between gap-4 px-5 py-4 text-sm font-medium text-ink text-left transition-colors"
+                            >
+                                Where is Dental Oasis Noida located?
+                                <svg
+                                    class="faq-icon w-5 h-5 fill-ink-light flex-shrink-0"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="faq-body">
+                                <p
+                                    class="px-5 pb-4 text-sm text-ink-light leading-relaxed"
+                                >
+                                    We are located at B-10, Pocket B, Sector 20,
+                                    Near Sector 19 Telephone Exchange, Noida –
+                                    201301, Uttar Pradesh. Easy to find and
+                                    conveniently accessible by metro and road.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING -->
+        <section
+            id="booking"
+            class="py-20 relative overflow-hidden"
+            style="
+                background: linear-gradient(
+                    135deg,
+                    #1a7fb0 0%,
+                    #279ed8 55%,
+                    #45b5e8 100%
+                );
+            "
+        >
+            <div
+                class="absolute inset-0 dot-bg opacity-25 pointer-events-none"
+            ></div>
+            <div class="max-w-6xl mx-auto px-5 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-14 items-center">
+                    <div class="reveal">
+                        <div
+                            class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 text-[.72rem] font-medium px-4 py-1.5 rounded-full mb-6"
+                        >
+                            <svg
+                                class="w-3.5 h-3.5 fill-yellow-300"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                />
+                            </svg>
+                            4.9 ★ — Top-rated clinic in Noida Sector 20
+                        </div>
+                        <h2
+                            class="font-display text-4xl lg:text-5xl font-semibold text-white leading-tight mb-4"
+                        >
+                            Ready for a<br /><span
+                                class="font-light italic opacity-85"
+                                >Healthier Smile?</span
+                            >
+                        </h2>
+                        <p
+                            class="text-white/70 text-sm leading-relaxed mb-6 max-w-sm"
+                        >
+                            Join 2,000+ happy patients. Fill out the form and
+                            our team will contact you within a few hours to
+                            confirm your visit.
+                        </p>
+
+                        <div class="flex flex-col gap-3 mb-6">
+                            <a
+                                href="tel:+919818589376"
+                                class="inline-flex items-center gap-2.5 px-5 py-3 border border-white/40 text-white text-sm font-medium rounded-full hover:bg-white/10 transition-all w-max"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-white"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                    />
+                                </svg>
+                                +91 98185 89376
+                            </a>
+                            <a
+                                href="https://wa.me/919818589376"
+                                target="_blank"
+                                class="inline-flex items-center gap-2.5 px-5 py-3 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold rounded-full transition-all w-max"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-white"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    />
+                                </svg>
+                                Chat on WhatsApp
+                            </a>
+                        </div>
+
+                        <div
+                            class="flex items-start gap-2.5 text-white/70 text-xs"
+                        >
+                            <svg
+                                class="w-4 h-4 fill-white/60 flex-shrink-0 mt-0.5"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                />
+                            </svg>
+                            B-10, Pocket B, Sector 20, Near Sector 19 Telephone
+                            Exchange, Noida – 201301
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div
+                        class="bg-white rounded-3xl p-7 shadow-[0_20px_60px_rgba(0,0,0,.22)] reveal"
+                    >
+                        <h3
+                            class="font-display text-xl font-semibold text-ink mb-5"
+                        >
+                            Book My Appointment
+                        </h3>
+
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-ink-mid mb-1.5"
+                                    >Full Name</label
+                                >
+                                <input
+                                    type="text"
+                                    placeholder="Your full name"
+                                    class="w-full px-3.5 py-2.5 border border-primary-mid/50 rounded-lg text-sm text-ink bg-cream placeholder-ink-light/50 focus:outline-none focus:ring-2 transition-colors"
+                                    style="--tw-ring-color: #279ed8"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-ink-mid mb-1.5"
+                                    >Phone Number</label
+                                >
+                                <input
+                                    type="tel"
+                                    placeholder="+91 00000 00000"
+                                    class="w-full px-3.5 py-2.5 border border-primary-mid/50 rounded-lg text-sm text-ink bg-cream placeholder-ink-light/50 focus:outline-none transition-colors"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label
+                                class="block text-xs font-semibold text-ink-mid mb-1.5"
+                                >Service Type</label
+                            >
+                            <select
+                                class="w-full px-3.5 py-2.5 border border-primary-mid/50 rounded-lg text-sm text-ink bg-cream focus:outline-none transition-colors appearance-none"
+                            >
+                                <option value="">Select a service</option>
+                                <option>Dental Implants</option>
+                                <option>Facial Aesthetics</option>
+                                <option>Braces &amp; Orthodontics</option>
+                                <option>Root Canal Treatment (RCT)</option>
+                                <option>Crowns &amp; Bridges</option>
+                                <option>Teeth Whitening &amp; Veneers</option>
+                                <option>Smile Makeover</option>
+                                <option>General &amp; Advanced Surgery</option>
+                                <option>General Checkup</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-5">
+                            <label
+                                class="block text-xs font-semibold text-ink-mid mb-1.5"
+                                >Preferred Date</label
+                            >
+                            <input
+                                type="date"
+                                class="w-full px-3.5 py-2.5 border border-primary-mid/50 rounded-lg text-sm text-ink bg-cream focus:outline-none transition-colors"
+                            />
+                        </div>
+
+                        <button
+                            id="submitBtn"
+                            onclick="handleBooking()"
+                            class="w-full py-3 text-white text-sm font-semibold rounded-xl hover:-translate-y-px transition-all"
+                            style="background: #279ed8"
+                        >
+                            Confirm My Appointment →
+                        </button>
+
+                        <p
+                            class="text-center text-xs text-ink-light mt-3 flex items-center justify-center gap-1"
+                        >
+                            <svg
+                                class="w-3 h-3"
+                                style="fill: #279ed8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                                />
+                            </svg>
+                            Your information is secure and will never be shared.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="mt-14 rounded-2xl overflow-hidden reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.8!2d77.3288231!3d28.582337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d85254894f%3A0x36b2eeaac1efb8ca!2sDental%20Oasis%20Noida!5e0!3m2!1sen!2sin!4v1"
+                        width="100%"
+                        height="280"
+                        style="
+                            border: 0;
+                            filter: invert(10%) hue-rotate(180deg)
+                                brightness(0.9);
+                        "
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Dental Oasis Noida Location Map"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-ink text-white/60 pt-14 pb-6">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                    <div class="sm:col-span-2 lg:col-span-1">
+                        <a href="#" class="flex items-center gap-2.5 mb-4">
+                            <div class="w-22 h-10">
+                                <img
+                                    src="img/logo.svg"
+                                    class="w-full h-full object-cover"
+                                    alt=""
+                                />
+                            </div>
+                        </a>
+                        <p class="text-sm leading-relaxed">
+                            Your Smile, Our Passion. Premium dental and facial
+                            aesthetic care in the heart of Sector 20, Noida.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4
+                            class="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4"
+                        >
+                            Quick Nav
+                        </h4>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm hover:text-white transition-colors"
+                                    style="color: inherit"
+                                    >Services</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#why"
+                                    class="text-sm hover:text-white transition-colors"
+                                    style="color: inherit"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#team"
+                                    class="text-sm hover:text-white transition-colors"
+                                    style="color: inherit"
+                                    >Our Team</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#testimonials"
+                                    class="text-sm hover:text-white transition-colors"
+                                    style="color: inherit"
+                                    >Reviews</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#booking"
+                                    class="text-sm hover:text-white transition-colors"
+                                    style="color: inherit"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4
+                            class="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4"
+                        >
+                            Services
+                        </h4>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm transition-colors"
+                                    style="color: inherit"
+                                    >Dental Implants</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm transition-colors"
+                                    style="color: inherit"
+                                    >Facial Aesthetics</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm transition-colors"
+                                    style="color: inherit"
+                                    >Braces &amp; Orthodontics</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm transition-colors"
+                                    style="color: inherit"
+                                    >Root Canal (RCT)</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="text-sm transition-colors"
+                                    style="color: inherit"
+                                    >Smile Makeover</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4
+                            class="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-4"
+                        >
+                            Contact Info
+                        </h4>
+                        <div class="flex flex-col gap-3.5">
+                            <div class="flex items-start gap-2.5">
+                                <svg
+                                    class="w-4 h-4 flex-shrink-0 mt-0.5"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                    />
+                                </svg>
+                                <span class="text-xs leading-relaxed"
+                                    >B-10, Pocket B, Sector 20<br />Near Sector
+                                    19 Telephone Exchange<br />Noida – 201301,
+                                    UP</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <svg
+                                    class="w-4 h-4 flex-shrink-0"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                                    />
+                                </svg>
+                                <a
+                                    href="tel:+919818589376"
+                                    class="text-xs transition-colors hover:text-white"
+                                    >+91 98185 89376</a
+                                >
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <svg
+                                    class="w-4 h-4 flex-shrink-0 mt-0.5"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"
+                                    />
+                                </svg>
+                                <span class="text-xs leading-relaxed"
+                                    >Mon–Sat: 10am–8pm<br />Sunday: Closed</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <svg
+                                    class="w-4 h-4 flex-shrink-0"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    />
+                                </svg>
+                                <a
+                                    href="https://wa.me/919818589376"
+                                    target="_blank"
+                                    class="text-xs hover:text-white transition-colors"
+                                    >WhatsApp: +91 98185 89376</a
+                                >
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <svg
+                                    class="w-4 h-4 flex-shrink-0"
+                                    style="fill: #279ed8"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    />
+                                </svg>
+                                <a
+                                    href="https://www.instagram.com/dentaloasisnoida/"
+                                    target="_blank"
+                                    class="text-xs hover:text-white transition-colors"
+                                    >@dentaloasisnoida</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-white/[.08] pt-5 flex flex-wrap items-center justify-between gap-3 text-[.72rem] opacity-40"
+                >
+                    <p>© 2026 Dental Oasis Noida. All rights reserved.</p>
+                    <div class="flex gap-5">
+                        <a href="#" class="hover:opacity-80">Privacy Policy</a>
+                        <a href="#" class="hover:opacity-80"
+                            >Terms of Service</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const nav = document.getElementById("navbar");
+            window.addEventListener(
+                "scroll",
+                () => nav.classList.toggle("scrolled", scrollY > 20),
+                { passive: true },
+            );
+
+            function toggleMenu() {
+                const m = document.getElementById("mobileMenu");
+                m.style.display = m.style.display === "flex" ? "none" : "flex";
+            }
+            function closeMobile() {
+                document.getElementById("mobileMenu").style.display = "none";
+            }
+
+            function toggleFaq(btn) {
+                const item = btn.closest(".faq-item");
+                const wasOpen = item.classList.contains("open");
+                document
+                    .querySelectorAll(".faq-item.open")
+                    .forEach((i) => i.classList.remove("open"));
+                if (!wasOpen) item.classList.add("open");
+            }
+
+            function handleBooking() {
+                const btn = document.getElementById("submitBtn");
+                btn.textContent =
+                    "✓ Request Received — We'll call you shortly!";
+                btn.disabled = true;
+                btn.style.background = "#1a7fb0";
+                setTimeout(() => {
+                    btn.textContent = "Confirm My Appointment →";
+                    btn.disabled = false;
+                    btn.style.background = "#279ed8";
+                }, 5000);
+            }
+
+            const io = new IntersectionObserver(
+                (entries) =>
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add("visible");
+                            io.unobserve(e.target);
+                        }
+                    }),
+                { threshold: 0.1 },
+            );
+            document
+                .querySelectorAll(".reveal")
+                .forEach((el) => io.observe(el));
+        </script>
+
+        <script id="k1f3xv">
+            const videos = document.querySelectorAll(".testimonial-video");
+
+            videos.forEach((video) => {
+                const container = video.parentElement;
+                const muteBtn = container.querySelector(".mute-btn");
+                const pauseBtn = container.querySelector(".pause-btn");
+
+                muteBtn.addEventListener("click", () => {
+                    video.muted = !video.muted;
+                    muteBtn.textContent = video.muted ? "Unmute" : "Mute";
+                });
+
+                pauseBtn.addEventListener("click", () => {
+                    if (video.paused) {
+                        video.play();
+                        pauseBtn.textContent = "Pause";
+                    } else {
+                        video.pause();
+                        pauseBtn.textContent = "Play";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
